@@ -60,3 +60,9 @@ textarea {
     max-width: 800px;
 
 }
+
+@media (min-width: 800px) {
+    :root {
+        font-size: 62.5%;  /*todo 1rem será relativo a 10px*/
+    }
+}
