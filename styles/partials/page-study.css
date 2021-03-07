@@ -36,6 +36,8 @@
 .page-header .header-content {
     width: 95%;
     margin: 3.2rem auto;
+
+    position: relative;
 }
 
 .page-header .header-content strong {
@@ -225,12 +227,14 @@
 
     #search-teachers {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
         gap: 25px;
+        position: absolute;
+        bottom: -10px;
     }
 
     .page-header {
-        height: 275px;
+        height: 330px;
     }
 
     .page-header .top-bar-container {
@@ -239,6 +243,13 @@
 
     .page-header .header-content {
         max-width: 750px;
+    
+        margin-top: -100px;
+        flex: 1 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
     }
 
     #page-study main {
@@ -268,6 +279,10 @@
 
     .teacher-item footer button img {
         margin-right: 16px;
+    }
+    
+    .page-header .header-content strong {
+        max-width: 350px;
     }
 
 }
