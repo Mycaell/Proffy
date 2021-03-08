@@ -1,7 +1,7 @@
 #page-study #container {
     width: 100vw;
     height: 100vh;
-    background: var(--color-text-in-primary-light);
+    background: var(--color-background-light);
 }
 
 
