@@ -63,55 +63,34 @@
         </header>
 
         <main>
-            <article class="teacher-item">
-                <header>
-                    <img src="https://avatars.githubusercontent.com/u/44411808?s=60&v=4" alt="Mycaell">
+
+            {%for proffy in proffys%}
+
+                <article class="teacher-item">
+                    <header>
+                        <img src="{{proffy.avatar}}" alt="{{proffy.name}}">
+                        
+                        <div>
+                            <Strong>{{proffy.name}}</Strong>
+                            <span>{{proffy.subject}}</span>
+                        </div>
+
+                    </header>
                     
-                    <div>
-                        <Strong>Mycaell de Oliveira</Strong>
-                        <span>Química</span>
-                    </div>
-
-                </header>
-                
-                <p>Entusiasta das melhores tecnologias de química avançada. <br><br> Apaixonado por explodir coisas em laboratório.</p>
-                
-                <footer>
-                    <P>Preço/hora <strong>R$ 20,00</strong></P>
-
-                    <button type="button">
-                        <img src="/images/icons/whatsapp.svg" alt="Whatsapp">
-                        Entrar em  contato
-                    </button>
-                </footer>
-
-            </article>
-
-
-            <article class="teacher-item">
-                <header>
-                    <img src="https://avatars.githubusercontent.com/u/44411808?s=60&v=4" alt="Mycaell">
+                    <p>{{proffy.bio}}</p>
                     
-                    <div>
-                        <Strong>Mycaell de Oliveira</Strong>
-                        <span>Química</span>
-                    </div>
+                    <footer>
+                        <P>Preço/hora <strong>R$ {{proffy.cost}}</strong></P>
 
-                </header>
-                
-                <p>Entusiasta das melhores tecnologias de química avançada. <br><br> Apaixonado por explodir coisas em laboratório.</p>
-                
-                <footer>
-                    <P>Preço/hora <strong>R$ 20,00</strong></P>
+                        <a href="https://api.whatsapp.com/send?l=pt_BR&phone=55{{proffy.whatsapp}}&text=Tenho interesse na sua aula de {{proffy.subject}} {{proffy.name}}" class="button" target="_blank">
+                            <img src="/images/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato
+                        </a>
+                    </footer>
 
-                    <button type="button">
-                        <img src="/images/icons/whatsapp.svg" alt="Whatsapp">
-                        Entrar em  contato
-                    </button>
-                </footer>
+                </article>
 
-            </article>
-
+            {%endfor%}
+         
 
 
 
