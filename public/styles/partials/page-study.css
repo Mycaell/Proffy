@@ -34,7 +34,7 @@ body {
     align-items: center;
 
     transition: background 0.2s;
-    margin-top: 3rem;
+    margin-top: 3.3rem;
 }
 
 #search-teachers button:hover {
@@ -140,6 +140,12 @@ body {
     background: var(--color-secondary-dark);
 }
 
+
+#page-study main .no-results {
+    max-width: 30rem;
+    margin: 12rem auto;
+    text-align: center;
+}
 
 @media (min-width: 800px) {
     #page-study #container {
